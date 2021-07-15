@@ -1,0 +1,27 @@
+[package]
+name = "multi-purpose-search"
+version = "0.1.0"
+authors = ["Sebastiaan Saarloos <sebastiaan.saarloos@gmail.com>"]
+edition = "2018"
+features= ["sse4.1", "avx"]
+
+[profile.release]
+opt-level=3
+lto=true
+
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+itertools="0.10.1"
+rand = "0.8.3"
+nalgebra = { version = "0.27.1", features = ["serde-serialize"] }
+ultraviolet = { version = "0.8.1", features = [ "f64", "int", "serde" ] }
+rayon = "1.5"
+approx = "0.5.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+nalgebra-glm = "0.13.0"
+deflate = "0.9.1"
+# gaussian="0.6.0"
